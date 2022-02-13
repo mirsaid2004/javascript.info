@@ -141,3 +141,43 @@ login == "Employee"
   : (message = "");
 
 console.log(message);
+
+//logical operators
+//task 1
+console.log(null || 2 || undefined); // 2
+//task 2
+console.log(alert(1) || 2 || alert(3));
+// first runs alert(1) then 2 renders becouse alert returns undefined
+//task 3
+console.log(1 && null && 2); // returns null
+//task 4
+console.log(alert(1) && alert(2)); // in console renders undefined and first alert renders
+//task 5
+console.log(null || (2 && 3) || 4); // console shows 3
+//task 6
+if (age >= 14 && age <= 90) {
+}
+//task 7
+if (!(age >= 14 && age <= 90)) {
+}
+//task 8
+if (-1 || 0) alert("first"); // it won't work
+if (-1 && 0) alert("second"); // it won't work
+if (null || (-1 && 1)) alert("third"); // this works
+// task 9
+let who = prompt("who are you ?");
+let password;
+if (who == "Admin") {
+  password = prompt("enter password");
+  if (password == "TheMaster") {
+    alert("Welcome");
+  } else if (password.length > 1) {
+    alert("Wrong password");
+  } else {
+    alert("Canceled");
+  }
+} else if (who.length > 2) {
+  alert("i don't know you");
+} else {
+  alert("Canceled");
+}
